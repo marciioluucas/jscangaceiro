@@ -9,7 +9,7 @@ class DateConverter {
   }
 
   static toDate(texto) {
-    if(!new RegExp('^\d{4}-\d{2}-\d{2}$/').test(texto))
+    if(!new RegExp('([0-9]{4}-[0-9]{2}-[0-9]{2})').test(texto))
       throw new Error('O parâmetro deve estar no formato aaaa-mm-dd');
 
     return new Date(...texto.split(',')
